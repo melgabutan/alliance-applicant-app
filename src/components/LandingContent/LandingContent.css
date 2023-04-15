@@ -1,0 +1,36 @@
+h1 {
+  font-size: 3rem;
+  margin: 20px 0 10px;
+  width: 30.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  width: 30.5rem;
+}
+
+#landing-illustration {
+  width: 37.5rem;
+}
+
+#play-button {
+  margin-right: 0.625rem;
+  width: 3.125rem;
+}
+
+.landing-content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.landing-content a {
+  font-weight: 600;
+}
+
+.start-container {
+  align-items: center;
+  display: flex;
+}
