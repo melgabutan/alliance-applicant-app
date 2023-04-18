@@ -1,0 +1,15 @@
+.list-item {
+  align-items: center;
+  display: flex;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.list-item img {
+  margin-right: 20px;
+}
+
+.list-item p {
+  font-size: 0.875rem;
+  margin: 0;
+}

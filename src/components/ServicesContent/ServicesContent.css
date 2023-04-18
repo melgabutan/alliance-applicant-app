@@ -1,0 +1,16 @@
+.join-now {
+  display: flex;
+  justify-content: center;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.services-content h2 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  margin: 20px 0 70px 0;
+}

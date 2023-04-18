@@ -1,10 +1,14 @@
 h1 {
   font-size: 3rem;
-  margin: 20px 0 10px;
+  margin: 10px 0;
   width: 30.5rem;
 }
 
-p {
+.landing-greeting img {
+  width: 6.25rem;
+}
+
+.landing-greeting p {
   font-size: 1.25rem;
   font-weight: 300;
   width: 30.5rem;
@@ -17,6 +21,10 @@ p {
 #play-button {
   margin-right: 0.625rem;
   width: 3.125rem;
+}
+
+#play-link:hover + a {
+  color: red;
 }
 
 .landing-content {

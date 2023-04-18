@@ -1,0 +1,28 @@
+#application-form-prompt {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.2;
+  width: 33.75rem;
+  margin: 10px 0 15px 0;
+}
+
+.application-form-content {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.application-form-content img {
+  height: 31.25rem;
+  width: 31.25rem;
+  margin-right: 40px;
+}
+
+.application-form-txt h2 {
+  font-weight: 600;
+  margin: 0;
+}
+
+.application-form-txt {
+  text-align: left;
+}

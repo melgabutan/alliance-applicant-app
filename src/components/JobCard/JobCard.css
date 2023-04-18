@@ -1,0 +1,61 @@
+.job-card {
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 8.4375rem;
+  width: 28.75rem;
+  padding: 1.25rem;
+  margin: 0 3.125rem 30px 0;
+}
+
+.job-card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 10px 5px 0;
+}
+
+.job-card #job-description {
+  font-size: 0.625rem;
+  margin: 0 0 5px;
+  line-height: 1.2;
+  width: 20.3125rem;
+}
+
+.main-details {
+  display: flex;
+}
+
+.sub-details {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.apply-btns {
+  display: flex;
+}
+
+.job-txt-details {
+  display: inline;
+}
+
+.salary-txt {
+  margin: 0 0 5px;
+}
+
+.salary-txt .salary {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.job-chip {
+  height: 0.875rem;
+  width: 3.28125rem;
+}
+
+.month-txt {
+  font-size: 0.625rem;
+  font-weight: 300;
+}

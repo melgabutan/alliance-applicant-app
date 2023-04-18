@@ -1,0 +1,24 @@
+::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.input-tile {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-tile input {
+  border-radius: 5px;
+  border: 1.5px solid black;
+  padding-left: 15px;
+  height: 2.8125rem;
+  width: 13.4375rem;
+}
+
+.input-tile p {
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin: 0 15px 0 0;
+}

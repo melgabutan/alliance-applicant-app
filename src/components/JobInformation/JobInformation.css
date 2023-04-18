@@ -1,0 +1,67 @@
+.job-info {
+  display: flex;
+}
+
+.job-info-chip {
+  height: 1.4375rem;
+  width: 5.3125rem;
+}
+
+.job-info-header {
+  align-items: flex-start;
+  display: flex;
+}
+
+.job-info-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 15px 10px 0;
+}
+
+.job-information {
+  margin: 30px 0 0 30px;
+  text-align: left;
+}
+
+.job-information .image-card {
+  height: 7.8125rem;
+  width: 7.8125rem;
+  margin-right: 30px;
+}
+
+.job-information .image-card img {
+  height: 4.375rem;
+  width: 4.375rem;
+}
+
+.job-descriptions {
+  font-weight: 300;
+  margin-left: 15px;
+}
+
+.job-descriptions p {
+  margin: 5px 0;
+}
+
+.job-information h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.job-salary-txt {
+  margin-bottom: 10px;
+}
+
+.job-salary {
+  font-weight: 600;
+}
+
+.job-month-txt {
+  font-size: 0.625rem;
+  font-weight: 300;
+}
+
+.job-info-content .filled-button {
+  width: 6.25rem;
+  height: 1.5625rem;
+}

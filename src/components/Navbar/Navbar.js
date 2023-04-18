@@ -1,10 +1,9 @@
 import "./Navbar.css";
-
+// TODO: Make Design Responsive
 const Navbar = () => {
   return (
     <nav className="navbar">
       <a href="/">
-        {/* TODO: Replace Alliance Logo with a Higher Quality Version */}
         <img
           id="alliance-logo"
           src="./assets/images/navbar/alliance-logo.png"

@@ -1,0 +1,28 @@
+.filled-button {
+  background-color: #4e9e32;
+  align-items: center;
+  border-radius: 5px;
+  border: 1.5px solid #4e9e32;
+  cursor: pointer;
+  display: flex;
+  height: 2.5rem;
+  margin-right: 10px;
+  text-align: center;
+  width: 7.8125rem;
+}
+
+.filled-button:hover {
+  background-color: white;
+}
+
+.filled-button:hover .filled-btn-txt {
+  color: #4e9e32;
+}
+
+.filled-button p {
+  color: white;
+  display: inline;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  width: 100%;
+}

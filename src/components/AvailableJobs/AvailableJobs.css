@@ -1,0 +1,24 @@
+.available-jobs {
+  text-align: left;
+}
+
+.available-jobs h2 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin: 20px 0 5px 0;
+}
+
+.available-jobs #available-jobs-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.5;
+  width: 46.875rem;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.job-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
