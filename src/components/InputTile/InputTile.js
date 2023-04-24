@@ -2,9 +2,13 @@ import "./InputTile.css";
 
 const InputTile = (props) => {
   return (
-    <div className="input-tile">
-      <p>First Name</p>
-      <input type="text" placeholder="John" />
+    <div className={`input-tile ${props.className}`}>
+      <p>{props.field}</p>
+      <input
+        style={{ width: props.inputWidth }}
+        type={props.inputType}
+        placeholder={props.placeholder}
+      />
     </div>
   );
 };

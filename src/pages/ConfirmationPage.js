@@ -2,8 +2,42 @@ import Navbar from "../components/Navbar/Navbar";
 
 const ConfirmationPage = () => {
   return (
-    <div className="confirmation-page">
+    <div
+      style={{
+        textAlign: "center",
+      }}
+      className="confirmation-page"
+    >
       <Navbar />
+      <h2
+        style={{
+          fontSize: "2.5rem",
+          fontWeight: "600",
+          margin: "40px 0 35px",
+        }}
+      >
+        Congratulations, Mel! 👏🏻
+      </h2>
+      <img
+        style={{
+          width: "21.875rem",
+          height: "21.875rem",
+        }}
+        src="./assets/images/confirmation/illustration.png"
+      />
+      <p
+        style={{
+          margin: "35px auto auto",
+          width: "40.625rem",
+          fontSize: "1.25rem",
+          lineHeight: "1.5",
+          fontWeight: "300",
+        }}
+      >
+        You’re one step closer towards your goals ✨. For further instructions,
+        our recruitment team will be in touch <strong>via email</strong> within
+        <strong> 2 - 3 working days</strong>. We can’t wait to have you onboard!
+      </p>
     </div>
   );
 };

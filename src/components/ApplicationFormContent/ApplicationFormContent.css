@@ -12,7 +12,7 @@
   justify-content: center;
 }
 
-.application-form-content img {
+#application-illustration {
   height: 31.25rem;
   width: 31.25rem;
   margin-right: 40px;
@@ -25,4 +25,17 @@
 
 .application-form-txt {
   text-align: left;
+}
+
+#submit-application {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.submit {
+  align-items: center;
+}
+
+.submit a {
+  line-height: 0;
 }
