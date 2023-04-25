@@ -39,11 +39,11 @@ const router = createBrowserRouter([
     element: <ConfirmationPage />,
   },
   {
-    path: "/available-jobs",
+    path: "/available-jobs/:deptid",
     element: <AvailableJobsPage />,
   },
   {
-    path: "/job-information",
+    path: "/job-information/:jobid",
     element: <JobInformationPage />,
   },
   {
