@@ -4,23 +4,19 @@
   border: 1.5px solid black;
   cursor: pointer;
   display: flex;
-  height: 2.5rem;
+  height: 2.625rem;
   margin-right: 10px;
   text-align: center;
-  width: 7.8125rem;
+  width: 7.9375rem;
+  background-color: white;
+  display: inline;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 .outlined-button:hover {
   background-color: black;
-}
-
-.outlined-button:hover p {
   color: white;
-}
-
-.outlined-button p {
-  display: inline;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  width: 100%;
 }

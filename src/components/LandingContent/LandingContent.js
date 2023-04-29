@@ -1,4 +1,5 @@
 import "./LandingContent.css";
+import { Link } from "react-router-dom";
 // TODO: Make Design Responsive
 
 const LandingContent = () => {
@@ -19,7 +20,7 @@ const LandingContent = () => {
               alt="play-button"
             />
           </a>
-          <a href="/company-profile">Start Your Journey</a>
+          <Link to="/company-profile">Start Your Journey</Link>
         </div>
       </div>
       <img

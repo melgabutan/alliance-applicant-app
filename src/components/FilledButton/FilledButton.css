@@ -9,6 +9,11 @@
   margin-right: 10px;
   text-align: center;
   width: 7.8125rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.join-team-btn {
+  border-color: #065fd4;
 }
 
 .filled-button:hover {

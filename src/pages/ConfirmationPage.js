@@ -1,6 +1,13 @@
 import Navbar from "../components/Navbar/Navbar";
+import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ConfirmationPage = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  window.onpopstate = () => {
+    navigate("/");
+  };
   return (
     <div
       style={{
@@ -16,7 +23,7 @@ const ConfirmationPage = () => {
           margin: "40px 0 35px",
         }}
       >
-        Congratulations, Mel! 👏🏻
+        Congratulations, {location.state.firstName}! 👏🏻
       </h2>
       <img
         style={{

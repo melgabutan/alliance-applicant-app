@@ -1,15 +1,17 @@
 import "./OutlinedButton.css";
 
 const OutlinedButton = (props) => {
+  function handleClick() {
+    window.location.href = props.href;
+  }
   return (
-    <a href={props.href}>
-      <div
-        style={{ height: props.height, width: props.width }}
-        className="outlined-button"
-      >
-        <p>Learn More</p>
-      </div>
-    </a>
+    <button
+      style={{ height: props.height, width: props.width }}
+      className="outlined-button"
+      onClick={handleClick}
+    >
+      Learn More
+    </button>
   );
 };
 

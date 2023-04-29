@@ -7,13 +7,12 @@
 .input-tile {
   display: flex;
   flex-direction: column;
-  margin: 0 15px 30px 0;
-  margin-bottom: 30px;
+  margin: 0 15px 0 0;
 }
 
 .input-tile input {
   border-radius: 5px;
-  border: 1.5px solid black;
+  border: 1.5px solid;
   padding: 0 15px;
   height: 2.8125rem;
   width: 12.5rem;
@@ -41,4 +40,31 @@ input[type="file"] {
   font-size: 0.875rem;
   font-weight: 300;
   margin: 0 15px 0 0;
+}
+
+.input-tile .row-container {
+  margin: 10px 0;
+  visibility: hidden;
+}
+
+.input-tile img {
+  height: 0.9375rem;
+  margin-right: 5px;
+  width: 0.9375rem;
+}
+
+.input-tile span {
+  color: red;
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+.input-tile-error:focus {
+  border-color: red;
+  outline: red;
+}
+
+.input-tile-success:focus {
+  border-color: #4e9e32;
+  outline: #4e9e32;
 }

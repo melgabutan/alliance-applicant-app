@@ -36,8 +36,8 @@ const JobCard = (props) => {
           />
           <OutlinedButton
             href={props.learnHref}
-            height="1.5625rem"
-            width="4.6875rem"
+            height="1.6875rem"
+            width="4.8125rem"
           />
         </div>
         <div className="salary-txt">

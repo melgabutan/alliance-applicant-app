@@ -28,8 +28,21 @@
 }
 
 #submit-application {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  cursor: pointer;
+  background-color: white;
+  border: none;
   font-size: 1rem;
   font-weight: 600;
+}
+
+#submit-application:hover {
+  color: red;
+}
+
+#play-link:hover + button {
+  color: red;
 }
 
 .submit {
@@ -38,4 +51,11 @@
 
 .submit a {
   line-height: 0;
+}
+
+.application-form-content #play-link {
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  padding: 0;
 }
