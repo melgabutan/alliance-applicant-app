@@ -1,57 +1,69 @@
 import "./AvailableJobs.css";
-import ImageCard from "../ImageCard/ImageCard";
 import JobCard from "../JobCard/JobCard";
-import {useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
 // TODO: Make Design Responsive
 const AvailableJobs = (props) => {
+  const imageUrls = [
+    "../assets/images/common/software-developer.png",
+    "../assets/images/common/qa-engineer.png",
+    "../assets/images/common/hr-recruitment-staff.png",
+    "../assets/images/common/account-executive.png",
+    "../assets/images/common/hr-recruitment-specialist.png",
+    "../assets/images/common/senior-accountant.png",
+  ];
+
+  const teamNames = ["IT Team", "HR Team", "Finance Team"];
   let params = useParams();
   let deptid = params.deptid;
-
-  console.log(deptid);
-  
   const [info, setInfo] = useState([]);
-
   useEffect(() => {
-    axios.get(`http://localhost:55731/api/PositionAPI/list?PosDepartment=${deptid}&PageSize=5`)
-    .then((response) => {
-      setInfo(response.data);
-      console.log(response.data);
-      console.log(info);
-    });
+    const fetchData = async () => {
+      axios
+        .get(
+          `http://localhost:55731/api/PositionAPI/list?PosDepartment=${deptid}&PageSize=5`
+        )
+        .then((response) => {
+          setInfo(response.data);
+          console.log(response.data);
+          console.log(info);
+        })
+        .catch(function (error) {});
+    };
+    fetchData();
   }, []);
-  
+  console.log(deptid);
   return (
     <div className="available-jobs">
       <h2>Wohoo! Splendid choice! 🎉</h2>
       <p id="available-jobs-subtitle">
-        Below, you will find our current list of available jobs in the IT team.
-        We can’t wait to see what you bring to the team!
+        Below, you will find our current list of available jobs in the{" "}
+        {teamNames[deptid - 1]}. We can’t wait to see what you bring to the
+        team!
       </p>
       <div className="job-cards">
+        {info?.data?.map((infor) => (
+          //<li style={{listStyle:'none'}}> ⭐️{infor.name} </li>
+          <JobCard
+            learnHref={`/job-information/${infor.id}`}
+            firstChipText="Full-time"
+            firstChipColor="#4E9E32"
+            secondChipText="On-site"
+            secondChipColor="#F5C84C"
+            firstSalaryRange={infor.minSalary}
+            secondSalaryRange={infor.maxSalary}
+            jobTitle={infor.name}
+            applyHref={`/application-form/${infor.name}/${infor.id}`}
+            jobDescription={
+              <li style={{ listStyle: "none" }}> {infor.description} </li>
+            }
+            imgPath={imageUrls[infor.id - 1]}
+          />
+        ))}
 
-        {
-        info?.data?.map((infor) => (
-            //<li style={{listStyle:'none'}}> ⭐️{infor.name} </li> 
-            <JobCard
-              learnHref={`/job-information/${infor.id}`}
-              firstChipText="Full-time"
-              firstChipColor="#4E9E32"
-              secondChipText="Remote"
-              secondChipColor="#FF0000"
-              firstSalaryRange={infor.minSalary}
-              secondSalaryRange={infor.maxSalary}
-              jobTitle={infor.name}
-              jobDescription= {<li style={{listStyle:'none'}}> {infor.description} </li> }
-              imgPath="./assets/images/common/software-developer.png"
-            />
-           )
-        )
-        }
-      
-      {/*<JobCard
+        {/*<JobCard
           learnHref="/job-information"
           firstChipText="Full-time"
           firstChipColor="#4E9E32"
@@ -61,7 +73,7 @@ const AvailableJobs = (props) => {
           secondSalaryRange="40"
           jobTitle="Software Developer"
           jobDescription="Implements technical work, including software coding, design, testing, and documentation."
-          imgPath="./assets/images/common/software-developer.png"
+          
         />
         <JobCard
           learnHref="/job-information"

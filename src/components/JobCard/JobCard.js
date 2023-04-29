@@ -42,7 +42,7 @@ const JobCard = (props) => {
         </div>
         <div className="salary-txt">
           <span className="salary">
-            {`₱${props.firstSalaryRange}K - ${props.secondSalaryRange}K`}
+            {`₱${props.firstSalaryRange/1000}K - ${props.secondSalaryRange/1000}K`}
           </span>
           <span className="month-txt">/month</span>
         </div>

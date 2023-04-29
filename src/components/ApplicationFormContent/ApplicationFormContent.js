@@ -6,9 +6,13 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Axios } from "axios";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const ApplicationFormContent = (props) => {
+  let params = useParams();
+  let jobid = params.jobid;
   const { hideOtherComponents, unhideOtherComponents } = props;
   const navigate = useNavigate();
   const [uploading, setUploading] = useState(false);
@@ -41,6 +45,7 @@ const ApplicationFormContent = (props) => {
         formDataPDF.append("file", formik.values.curriculumVitae);
         formDataPDF.append("upload_preset", "alliance");
         formData.append("upload_preset", "alliance");
+
         setUploading(true);
         hideOtherComponents();
 
@@ -48,14 +53,29 @@ const ApplicationFormContent = (props) => {
           "https://api.cloudinary.com/v1_1/dmlkt1car/upload",
           formDataPDF
         );
-        const res = await axios
-          .post(
-            "https://api.cloudinary.com/v1_1/dmlkt1car/image/upload",
-            formData
-          )
+        const res = await axios.post(
+          "https://api.cloudinary.com/v1_1/dmlkt1car/image/upload",
+          formData
+        );
+
+        const applicantData = {};
+        const postRequest = await axios
+          .post("http://localhost:55731/api/ApplicantAPI/add", {
+            apl_firstName: formik.values.firstName,
+            apl_lastName: formik.values.lastName,
+            apl_email: formik.values.emailAddress,
+            apl_documentCV: resPDF.data.secure_url,
+            apl_documentPhoto: res.data.secure_url,
+            apl_position: parseInt(jobid),
+            apl_status: 1,
+          })
           .then(() => {
             setUploading(false);
             unhideOtherComponents();
+          })
+          .catch((error) => {
+            console.log(error);
+            console.log(postRequest.data);
           });
         console.log(res);
       } catch (error) {
@@ -64,7 +84,6 @@ const ApplicationFormContent = (props) => {
       navigate("/confirmation", { state: { firstName: values.firstName } });
     },
   });
-
   function handleInputTileBorderColor(touched, hasErrorMessage) {
     if (!touched) {
       return "black";
@@ -83,7 +102,7 @@ const ApplicationFormContent = (props) => {
     <div className="application-form-content">
       <img
         id="application-illustration"
-        src="./assets/images/application-form/illustration.png"
+        src="../../assets/images/application-form/illustration.png"
         alt="illustration"
       />
       <div className="application-form-txt">
@@ -221,7 +240,7 @@ const ApplicationFormContent = (props) => {
               <button id="play-link" type="submit">
                 <img
                   id="play-button"
-                  src="./assets/images/landing-content/play-button.png"
+                  src="../../assets/images/landing-content/play-button.png"
                   alt="play-button"
                 />
               </button>

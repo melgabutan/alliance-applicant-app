@@ -30,8 +30,8 @@ const FileTile = (props) => {
           <img
             src={
               fileContained()
-                ? "./assets/images/application-form/success-icon.png"
-                : "./assets/images/application-form/upload-icon.png"
+                ? "../../assets/images/application-form/success-icon.png"
+                : "../../assets/images/application-form/upload-icon.png"
             }
             alt="icon"
           />
@@ -44,8 +44,8 @@ const FileTile = (props) => {
           className="file-validator-icon"
           src={
             props.errorMessage === "" || fileContained()
-              ? "./assets/images/application-form/info-icon.png"
-              : "./assets/images/application-form/error-icon.png"
+              ? "../../assets/images/application-form/info-icon.png"
+              : "../../assets/images/application-form/error-icon.png"
           }
         />
         <p

@@ -22,7 +22,7 @@ const InputTile = (props) => {
         className="row-container"
       >
         <img
-          src="./assets/images/application-form/error-icon.png"
+          src="../../assets/images/application-form/error-icon.png"
           alt="error-icon"
         />
         <span>{props.errorMessage}</span>

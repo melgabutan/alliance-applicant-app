@@ -17,9 +17,9 @@ function App() {
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/join-team" element={<JoinTeamPage />} />
       <Route path="/confirmation" element={<ConfirmationPage />} />
-      <Route path="/available-jobs" element={<AvailableJobsPage />} />
-      <Route path="/job-information" element={<JobInformationPage />} />
-      <Route path="/application-form" element={<ApplicationFormPage />} />
+      <Route path="/available-jobs/:deptid" element={<AvailableJobsPage />} />
+      <Route path="/job-information/:jobid" element={<JobInformationPage />} />
+      <Route path="/application-form/:posname/:jobid" element={<ApplicationFormPage />} />
     </Routes>
   );
 }

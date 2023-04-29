@@ -6,7 +6,7 @@ const Navbar = () => {
       <a href="/">
         <img
           id="alliance-logo"
-          src="../assets/images/navbar/alliance-logo.png"
+          src="../../assets/images/navbar/alliance-logo.png"
           alt="alliance-logo"
         />
       </a>
@@ -28,7 +28,7 @@ const Navbar = () => {
         <a href="https://www.alliance.com.ph/contact">
           <img
             id="phone-icon"
-            src="../assets/images/navbar/phone-icon.png"
+            src="../../assets/images/navbar/phone-icon.png"
             alt="phone-icon"
           />
         </a>
