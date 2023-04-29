@@ -8,7 +8,7 @@ const JoinTeamContent = () => {
       <h2>Join the team that excites you most!</h2>
       <div className="row-container teams-container">
         <TeamCard
-          href="/available-jobs"
+          href="/available-jobs/2"
           firstDescription="Attracts the best talents"
           secondDescription="Ensures employee satisfaction"
           thirdDescription="Enforces company policies"
@@ -17,7 +17,7 @@ const JoinTeamContent = () => {
           teamName="HR Team"
         />
         <TeamCard
-          href="/available-jobs"
+          href="/available-jobs/1"
           firstDescription="Protects IT assets"
           secondDescription="Optimizes computer systems"
           thirdDescription="Develop software solutions"
@@ -26,7 +26,7 @@ const JoinTeamContent = () => {
           teamName="IT Team"
         />
         <TeamCard
-          href="/available-jobs"
+          href="/available-jobs/3"
           firstDescription="Analyzes financial data"
           secondDescription="Keeps financial records accurate"
           thirdDescription="Manages the company's budget"

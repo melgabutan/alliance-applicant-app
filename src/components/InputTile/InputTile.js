@@ -2,7 +2,7 @@ import "./InputTile.css";
 
 const InputTile = (props) => {
   return (
-    <div className={`input-tile ${props.className}`}>
+    <div name={props.name} className={`input-tile ${props.className}`}>
       <p>{props.field}</p>
       <input
         className={props.className}

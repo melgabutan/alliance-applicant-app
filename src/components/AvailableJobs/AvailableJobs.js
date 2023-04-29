@@ -1,9 +1,28 @@
 import "./AvailableJobs.css";
 import ImageCard from "../ImageCard/ImageCard";
 import JobCard from "../JobCard/JobCard";
+import {useState, useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 // TODO: Make Design Responsive
-const AvailableJobs = () => {
+const AvailableJobs = (props) => {
+  let params = useParams();
+  let deptid = params.deptid;
+
+  console.log(deptid);
+  
+  const [info, setInfo] = useState([]);
+
+  useEffect(() => {
+    axios.get(`http://localhost:55731/api/PositionAPI/list?PosDepartment=${deptid}&PageSize=5`)
+    .then((response) => {
+      setInfo(response.data);
+      console.log(response.data);
+      console.log(info);
+    });
+  }, []);
+  
   return (
     <div className="available-jobs">
       <h2>Wohoo! Splendid choice! 🎉</h2>
@@ -12,6 +31,38 @@ const AvailableJobs = () => {
         We can’t wait to see what you bring to the team!
       </p>
       <div className="job-cards">
+
+        {
+        info?.data?.map((infor) => (
+            //<li style={{listStyle:'none'}}> ⭐️{infor.name} </li> 
+            <JobCard
+              learnHref={`/job-information/${infor.id}`}
+              firstChipText="Full-time"
+              firstChipColor="#4E9E32"
+              secondChipText="Remote"
+              secondChipColor="#FF0000"
+              firstSalaryRange={infor.minSalary}
+              secondSalaryRange={infor.maxSalary}
+              jobTitle={infor.name}
+              jobDescription= {<li style={{listStyle:'none'}}> {infor.description} </li> }
+              imgPath="./assets/images/common/software-developer.png"
+            />
+           )
+        )
+        }
+      
+      {/*<JobCard
+          learnHref="/job-information"
+          firstChipText="Full-time"
+          firstChipColor="#4E9E32"
+          secondChipText="Remote"
+          secondChipColor="#FF0000"
+          firstSalaryRange="20"
+          secondSalaryRange="40"
+          jobTitle="Software Developer"
+          jobDescription="Implements technical work, including software coding, design, testing, and documentation."
+          imgPath="./assets/images/common/software-developer.png"
+        />
         <JobCard
           learnHref="/job-information"
           firstChipText="Full-time"
@@ -45,7 +96,8 @@ const AvailableJobs = () => {
           jobTitle="Systems Analyst"
           jobDescription="Analyzes and designs computer systems. Moreover, ensures that the needs of the clients are met."
           imgPath="./assets/images/common/systems-analyst.png"
-        />
+        /> 
+      */}
       </div>
     </div>
   );
